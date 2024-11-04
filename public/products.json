@@ -68,7 +68,7 @@
   {
     "product_id": "P001",
     "product_title": "Galaxy S21",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/zNnDDRT/galaxy-s21.jpg",
     "category": "Phones",
     "price": 799,
     "description": "Latest Galaxy smartphone with high-resolution camera and fast processor.",
@@ -79,7 +79,7 @@
   {
     "product_id": "P002",
     "product_title": "Pixel 6",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/bRW9srg/pixel-6.jpg",
     "category": "Phones",
     "price": 699,
     "description": "Google's newest phone with great camera features and clean Android experience.",
@@ -90,7 +90,7 @@
   {
     "product_id": "P003",
     "product_title": "IPhone SE",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/sWXv3mg/iphone-se.jpg",
     "category": "Phones",
     "price": 429,
     "description": "Compact IPhone model with A13 Bionic chip and classic design.",
@@ -101,7 +101,7 @@
   {
     "product_id": "A001",
     "product_title": "Wireless Earbuds",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/RcS6HZr/wireless-earbuds.jpg",
     "category": "Accessories",
     "price": 99,
     "description": "True wireless earbuds with noise cancellation and high-quality sound.",
@@ -112,7 +112,7 @@
   {
     "product_id": "A002",
     "product_title": "Portable Charger",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/JkKDH5b/portable-charger.jpg",
     "category": "Accessories",
     "price": 59,
     "description": "Compact portable charger with fast charging and 10000mAh capacity.",
@@ -123,7 +123,7 @@
   {
     "product_id": "S001",
     "product_title": "Smart Watch Pro",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/LgpZBfZ/smart-watch-pro.jpg",
     "category": "Smart Watches",
     "price": 250,
     "description": "Feature-rich smartwatch with fitness tracking and heart rate monitoring.",
@@ -134,7 +134,7 @@
   {
     "product_id": "S002",
     "product_title": "Basic Fit Tracker",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/JqT20Rt/basic-fit-tracker.jpg",
     "category": "Smart Watches",
     "price": 80,
     "description": "Affordable fitness tracker with step tracking and sleep monitoring.",
@@ -145,7 +145,7 @@
   {
     "product_id": "M001",
     "product_title": "MacBook Air",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/4RqTxJ0/macbook-air.jpg",
     "category": "MacBook",
     "price": 999,
     "description": "Lightweight MacBook with M1 chip and great battery life.",
@@ -156,7 +156,7 @@
   {
     "product_id": "M002",
     "product_title": "MacBook Pro 16",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/xh0WbTH/macbook-pro-16.jpg",
     "category": "MacBook",
     "price": 2400,
     "description": "Powerful MacBook with M1 Pro chip for professionals.",
@@ -167,7 +167,7 @@
   {
     "product_id": "I001",
     "product_title": "IPhone 13",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/cXxVgfY/iphone-13.jpg",
     "category": "Iphone",
     "price": 799,
     "description": "Apple's latest smartphone with A15 Bionic chip and advanced camera.",
@@ -178,7 +178,7 @@
   {
     "product_id": "I002",
     "product_title": "IPhone 13 Pro",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/km4PYBc/iphone-13-pro.jpg",
     "category": "Iphone",
     "price": 999,
     "description": "Pro model with enhanced camera and display technology.",
@@ -189,7 +189,7 @@
   {
     "product_id": "I003",
     "product_title": "IPhone 13 Mini",
-    "product_image": "url_to_image",
+    "product_image": "https://i.ibb.co.com/hKqCFqT/iphone-13-mini.jpg",
     "category": "Iphone",
     "price": 699,
     "description": "Compact version of IPhone 13 with the same powerful features.",
