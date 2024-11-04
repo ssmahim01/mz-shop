@@ -7,7 +7,7 @@ const Home = () => {
   const categories = useLoaderData();
 
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
      <div className="border border-gray-300 rounded-3xl px-2">
      <div className="bg-bannerColor rounded-3xl relative">
         {/* <Navbar></Navbar> */}

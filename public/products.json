@@ -117,7 +117,7 @@
     "price": 59,
     "description": "Compact portable charger with fast charging and 10000mAh capacity.",
     "Specification": ["10000mAh", "USB-C & USB-A ports", "Quick Charge support"],
-    "availability": true,
+    "availability": false,
     "rating": 4.4
   },
   {
@@ -194,7 +194,7 @@
     "price": 699,
     "description": "Compact version of IPhone 13 with the same powerful features.",
     "Specification": ["A15 Bionic chip", "128GB Storage", "5.4-inch display", "Dual-camera system"],
-    "availability": true,
+    "availability": false,
     "rating": 4.5
   }
 ]

@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        bannerColor: 'rgb(149, 56, 226)'
+        bannerColor: 'rgb(149, 56, 226)',
+        rating: 'rgb(249, 192, 4)'
       },
       textColor: {
         textColor: 'rgb(149, 56, 226)',
