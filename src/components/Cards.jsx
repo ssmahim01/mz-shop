@@ -19,7 +19,7 @@ const Cards = () => {
   }, [productsData, category]);
 
   return (
-    <div className="col-span-9">
+    <div className="col-span-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {productsData.map((product) => (
           <Card key={product.product_id} product={product}></Card>
