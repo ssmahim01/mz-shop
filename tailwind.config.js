@@ -11,6 +11,12 @@ export default {
       backgroundColor: {
         bannerColor: 'rgb(149, 56, 226)'
       },
+      textColor: {
+        textColor: 'rgb(149, 56, 226)'
+      },
+     borderColor: {
+        btnBorder: 'rgb(149, 56, 226)'
+      },
     },
   },
   plugins: [

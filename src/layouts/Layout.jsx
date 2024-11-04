@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="bg-gray-100">
       <div className="w-11/12 mx-auto">
        <Navbar></Navbar>
         <div className="min-h-[calc(100vh+350px)]">
