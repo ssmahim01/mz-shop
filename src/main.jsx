@@ -7,11 +7,14 @@ import Statistics from "./pages/Statistics";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Cards from "./components/Cards";
+import ErrorElement from "./Error/ErrorElement";
+import ProductDetails from "./components/productDetails";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout></Layout>,
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       {
         path: '/',
@@ -29,6 +32,11 @@ const router = createBrowserRouter([
             element: <Cards></Cards>
           },
         ],
+      },
+      {
+        path: '/product/:product_id',
+        loader: () => fetch('/products.json'),
+        element: <ProductDetails></ProductDetails>
       },
       {
         path: '/statistics',

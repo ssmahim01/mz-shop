@@ -8,10 +8,10 @@ const Layout = () => {
     <div className="bg-gray-100">
       <div className="w-11/12 mx-auto">
        <Navbar></Navbar>
-        <div className="min-h-[calc(100vh+350px)]">
+      </div>
+        <div className="min-h-[calc(100vh+80px)]">
           <Outlet />
         </div>
-      </div>
       <Footer />
     </div>
   );

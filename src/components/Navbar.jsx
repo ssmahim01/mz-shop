@@ -27,15 +27,15 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-3"
           >
-            <NavLink to="/" className="text-gray-700 font-medium">
+            <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
               Home
             </NavLink>
 
-            <NavLink to="/statistics" className="text-gray-700 font-medium">
+            <NavLink to="/statistics" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
               Statistics
             </NavLink>
 
-            <NavLink to="/dashboard" className="text-gray-700 font-medium">
+            <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
               Dashboard
             </NavLink>
           </ul>
@@ -47,15 +47,15 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-8">
-          <NavLink to="/" className="text-gray-700 font-medium">
+          <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
             Home
           </NavLink>
 
-          <NavLink to="/statistics" className="text-gray-700 font-medium">
+          <NavLink to="/statistics" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
             Statistics
           </NavLink>
 
-          <NavLink to="/dashboard" className="text-gray-700 font-medium">
+          <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
             Dashboard
           </NavLink>
         </ul>

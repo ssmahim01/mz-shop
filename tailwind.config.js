@@ -12,10 +12,12 @@ export default {
         bannerColor: 'rgb(149, 56, 226)'
       },
       textColor: {
-        textColor: 'rgb(149, 56, 226)'
+        textColor: 'rgb(149, 56, 226)',
+        textGreen: 'rgb(48, 156, 8)'
       },
      borderColor: {
-        btnBorder: 'rgb(149, 56, 226)'
+        btnBorder: 'rgb(149, 56, 226)',
+        greenBorder: 'rgb(48, 156, 8)'
       },
     },
   },
