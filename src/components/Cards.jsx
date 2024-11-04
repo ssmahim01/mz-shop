@@ -5,7 +5,7 @@ import Card from "./Card";
 const Cards = () => {
   const productsData = useLoaderData();
   const { category } = useParams();
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     if (category) {
@@ -21,7 +21,7 @@ const Cards = () => {
   return (
     <div className="col-span-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {productsData.map((product) => (
+        {products.map((product) => (
           <Card key={product.product_id} product={product}></Card>
         ))}
       </div>
