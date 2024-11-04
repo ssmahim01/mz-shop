@@ -1,145 +1,200 @@
 [
-    {
-      "product_id": 1,
-      "product_title": "Gaming Laptop - Acer Predator",
-      "product_image": "https://example.com/images/acer_predator.jpg",
-      "category": "Laptops",
-      "price": 1299.99,
-      "description": "Powerful gaming laptop with high-end graphics and efficient cooling for extended play.",
-      "Specification": [
-        "Processor: Intel Core i7",
-        "Graphics: NVIDIA GeForce RTX 3060",
-        "RAM: 16GB",
-        "Storage: 512GB SSD"
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": 2,
-      "product_title": "iPhone 14 Pro",
-      "product_image": "https://example.com/images/iphone_14_pro.jpg",
-      "category": "Phones",
-      "price": 999.99,
-      "description": "Latest iPhone with advanced camera features and A15 Bionic chip for high performance.",
-      "Specification": [
-        "Display: 6.1 inch Super Retina XDR",
-        "Processor: A15 Bionic",
-        "Storage Options: 128GB, 256GB, 512GB",
-        "Camera: Triple-lens setup with LiDAR"
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-    {
-      "product_id": 3,
-      "product_title": "Wireless Earbuds - Sony WF-1000XM4",
-      "product_image": "https://example.com/images/sony_earbuds.jpg",
-      "category": "Accessories",
-      "price": 249.99,
-      "description": "Noise-cancelling wireless earbuds with superior sound quality and long battery life.",
-      "Specification": [
-        "Noise Cancellation: Yes",
-        "Battery Life: 8 hours (24 hours with case)",
-        "Bluetooth Version: 5.2",
-        "Water Resistance: IPX4"
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": 4,
-      "product_title": "Samsung Galaxy Watch 5",
-      "product_image": "https://example.com/images/galaxy_watch_5.jpg",
-      "category": "Smart Watches",
-      "price": 279.99,
-      "description": "Smartwatch with fitness tracking, heart rate monitor, and advanced sleep analysis.",
-      "Specification": [
-        "Display: 1.4 inch AMOLED",
-        "Battery Life: Up to 3 days",
-        "Water Resistance: 5ATM",
-        "Compatibility: Android and iOS"
-      ],
-      "availability": true,
-      "rating": 4.5
-    },
-    {
-      "product_id": 5,
-      "product_title": "MacBook Air M2",
-      "product_image": "https://example.com/images/macbook_air_m2.jpg",
-      "category": "Laptops",
-      "price": 1199.99,
-      "description": "Lightweight laptop with Apple's M2 chip for exceptional performance and battery efficiency.",
-      "Specification": [
-        "Processor: Apple M2",
-        "RAM: 8GB",
-        "Storage: 256GB SSD",
-        "Battery Life: Up to 18 hours"
-      ],
-      "availability": true,
-      "rating": 4.9
-    },
-    {
-      "product_id": 6,
-      "product_title": "Samsung Galaxy S22",
-      "product_image": "https://example.com/images/galaxy_s22.jpg",
-      "category": "Phones",
-      "price": 799.99,
-      "description": "Flagship Samsung phone with advanced camera technology and dynamic AMOLED display.",
-      "Specification": [
-        "Display: 6.2 inch Dynamic AMOLED 2X",
-        "Processor: Snapdragon 8 Gen 1",
-        "Camera: Triple-lens with 50MP main sensor",
-        "Battery: 3700mAh"
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": 7,
-      "product_title": "USB-C Hub Adapter",
-      "product_image": "https://example.com/images/usbc_hub.jpg",
-      "category": "Accessories",
-      "price": 39.99,
-      "description": "Multi-port USB-C hub adapter with HDMI, USB 3.0, and SD card reader compatibility.",
-      "Specification": [
-        "Ports: HDMI, USB 3.0, SD, microSD",
-        "Compatibility: USB-C devices",
-        "Material: Aluminum"
-      ],
-      "availability": true,
-      "rating": 4.4
-    },
-    {
-      "product_id": 8,
-      "product_title": "Apple Watch Series 8",
-      "product_image": "https://example.com/images/apple_watch_8.jpg",
-      "category": "Smart Watches",
-      "price": 399.99,
-      "description": "Smartwatch with health tracking, ECG, blood oxygen monitoring, and activity tracking.",
-      "Specification": [
-        "Display: Always-on Retina",
-        "Battery Life: Up to 18 hours",
-        "Compatibility: iOS",
-        "Water Resistance: 50 meters"
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": 9,
-      "product_title": "MacBook Pro M1",
-      "product_image": "https://example.com/images/macbook_pro_m1.jpg",
-      "category": "Laptops",
-      "price": 1499.99,
-      "description": "Powerful MacBook Pro with the M1 chip, offering incredible speed and graphics performance.",
-      "Specification": [
-        "Processor: Apple M1",
-        "RAM: 8GB",
-        "Storage: 512GB SSD",
-        "Battery Life: Up to 20 hours"
-      ],
-      "availability": true,
-      "rating": 4.8
-    }
-  ]  
+  {
+    "product_id": "L001",
+    "product_title": "UltraBook 15",
+    "product_image": "https://i.ibb.co.com/j4xnvx8/ultrabook-15.jpg",
+    "category": "laptops",
+    "price": 850,
+    "description": "Lightweight and powerful ultrabook with 16GB RAM and 512GB SSD.",
+    "Specification": ["Intel i7 processor", "16GB RAM", "512GB SSD", "15-inch display"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "L002",
+    "product_title": "Gaming Beast Pro",
+    "product_image": "https://i.ibb.co.com/1KvWspR/gaming-beast-pro.jpg",
+    "category": "laptops",
+    "price": 1200,
+    "description": "High-performance gaming laptop with RTX 3060 GPU and RGB keyboard.",
+    "Specification": ["Intel i9 processor", "32GB RAM", "1TB SSD", "17-inch display"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "L003",
+    "product_title": "Workstation Pro",
+    "product_image": "https://i.ibb.co.com/tHkJfD2/workstation-pro.jpg",
+    "category": "laptops",
+    "price": 1400,
+    "description": "Professional laptop with Quadro graphics for designers and engineers.",
+    "Specification": ["Intel Xeon processor", "32GB RAM", "1TB SSD", "15.6-inch display"],
+    "availability": false,
+    "rating": 4.3
+  },
+  {
+    "product_id": "L004",
+    "product_title": "Slimbook X",
+    "product_image": "https://i.ibb.co.com/fGs4Wr0/slimbook-x.jpg",
+    "category": "laptops",
+    "price": 900,
+    "description": "Sleek and portable laptop with 8GB RAM and 256GB SSD.",
+    "Specification": ["Intel i5 processor", "8GB RAM", "256GB SSD", "13.3-inch display"],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": "L005",
+    "product_title": "EduBook",
+    "product_image": "https://i.ibb.co.com/t8r5fVD/edubook.jpg",
+    "category": "laptops",
+    "price": 600,
+    "description": "Affordable laptop designed for students with a durable build.",
+    "Specification": ["Intel i3 processor", "8GB RAM", "128GB SSD", "14-inch display"],
+    "availability": true,
+    "rating": 4.1
+  },
+  {
+    "product_id": "L006",
+    "product_title": "PowerHouse",
+    "product_image": "https://i.ibb.co.com/DC70qpH/power-house.jpg",
+    "category": "laptops",
+    "price": 1500,
+    "description": "High-end laptop for power users needing extensive processing power.",
+    "Specification": ["AMD Ryzen 9", "32GB RAM", "1TB SSD", "15.6-inch display"],
+    "availability": false,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P001",
+    "product_title": "Galaxy S21",
+    "product_image": "url_to_image",
+    "category": "phones",
+    "price": 799,
+    "description": "Latest Galaxy smartphone with high-resolution camera and fast processor.",
+    "Specification": ["Snapdragon 888", "8GB RAM", "128GB Storage", "6.2-inch display"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Pixel 6",
+    "product_image": "url_to_image",
+    "category": "phones",
+    "price": 699,
+    "description": "Google's newest phone with great camera features and clean Android experience.",
+    "Specification": ["Google Tensor chip", "8GB RAM", "128GB Storage", "6.4-inch display"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P003",
+    "product_title": "iPhone SE",
+    "product_image": "url_to_image",
+    "category": "phones",
+    "price": 429,
+    "description": "Compact iPhone model with A13 Bionic chip and classic design.",
+    "Specification": ["A13 Bionic chip", "64GB Storage", "4.7-inch display"],
+    "availability": false,
+    "rating": 4.1
+  },
+  {
+    "product_id": "A001",
+    "product_title": "Wireless Earbuds",
+    "product_image": "url_to_image",
+    "category": "accessories",
+    "price": 99,
+    "description": "True wireless earbuds with noise cancellation and high-quality sound.",
+    "Specification": ["Bluetooth 5.0", "Noise Cancellation", "20 hours playtime"],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": "A002",
+    "product_title": "Portable Charger",
+    "product_image": "url_to_image",
+    "category": "accessories",
+    "price": 59,
+    "description": "Compact portable charger with fast charging and 10000mAh capacity.",
+    "Specification": ["10000mAh", "USB-C & USB-A ports", "Quick Charge support"],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "S001",
+    "product_title": "Smart Watch Pro",
+    "product_image": "url_to_image",
+    "category": "smart watches",
+    "price": 250,
+    "description": "Feature-rich smartwatch with fitness tracking and heart rate monitoring.",
+    "Specification": ["Heart rate monitor", "GPS", "Water-resistant", "7-day battery"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "S002",
+    "product_title": "Basic Fit Tracker",
+    "product_image": "url_to_image",
+    "category": "smart watches",
+    "price": 80,
+    "description": "Affordable fitness tracker with step tracking and sleep monitoring.",
+    "Specification": ["Step tracker", "Sleep monitoring", "Water-resistant", "10-day battery"],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": "M001",
+    "product_title": "MacBook Air",
+    "product_image": "url_to_image",
+    "category": "macbook",
+    "price": 999,
+    "description": "Lightweight MacBook with M1 chip and great battery life.",
+    "Specification": ["Apple M1 chip", "8GB RAM", "256GB SSD", "13-inch Retina display"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "M002",
+    "product_title": "MacBook Pro 16",
+    "product_image": "url_to_image",
+    "category": "macbook",
+    "price": 2400,
+    "description": "Powerful MacBook with M1 Pro chip for professionals.",
+    "Specification": ["Apple M1 Pro chip", "16GB RAM", "512GB SSD", "16-inch Retina display"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "I001",
+    "product_title": "iPhone 13",
+    "product_image": "url_to_image",
+    "category": "iphone",
+    "price": 799,
+    "description": "Apple's latest smartphone with A15 Bionic chip and advanced camera.",
+    "Specification": ["A15 Bionic chip", "128GB Storage", "6.1-inch display", "Dual-camera system"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "I002",
+    "product_title": "iPhone 13 Pro",
+    "product_image": "url_to_image",
+    "category": "iphone",
+    "price": 999,
+    "description": "Pro model with enhanced camera and display technology.",
+    "Specification": ["A15 Bionic chip", "128GB Storage", "6.1-inch Super Retina XDR display", "Triple-camera system"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "I003",
+    "product_title": "iPhone 13 Mini",
+    "product_image": "url_to_image",
+    "category": "iphone",
+    "price": 699,
+    "description": "Compact version of iPhone 13 with the same powerful features.",
+    "Specification": ["A15 Bionic chip", "128GB Storage", "5.4-inch display", "Dual-camera system"],
+    "availability": true,
+    "rating": 4.5
+  }
+]
