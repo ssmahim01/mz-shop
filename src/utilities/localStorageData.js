@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const getStoredCart = () => {
   const cartStr = localStorage.getItem("cart");
   if (cartStr) {
@@ -14,9 +16,9 @@ const addCartList = (id) => {
     storedCartList.push(id);
     const storedCartStr = JSON.stringify(storedCartList);
     localStorage.setItem("cart", storedCartStr);
-    alert("Added to your Cart");
+    toast.success("Added to your Cart");
   } else {
-    alert("Already exists in the Cart list");
+    toast.error("Already exists in the Cart list");
   }
 };
 
@@ -36,10 +38,10 @@ const addWishlist = (id) => {
     storedWishlist.push(id);
     const storedWishlistStr = JSON.stringify(storedWishlist);
     localStorage.setItem("wishlist", storedWishlistStr);
-    alert("Added to your Wishlist");
+    toast.success("Added to your Wishlist");
   } else {
-    alert("Already exists in the Wishlist");
+    toast.error("Already exists in the Wishlist");
   }
 };
 
-export { addCartList, addWishlist };
+export { addCartList, addWishlist, getStoredCart, getStoredWishlist };

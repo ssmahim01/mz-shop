@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Cards from "./components/Cards";
 import ErrorElement from "./Error/ErrorElement";
 import ProductDetails from "./components/productDetails";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/product/:product_id',
-        loader: () => fetch('/products.json'),
+        loader: () => fetch('../products.json'),
         element: <ProductDetails></ProductDetails>
       },
       {
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
+        loader: () => fetch('../products.json'),
         element: <Dashboard></Dashboard>
       },
     ]
@@ -53,5 +55,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <Toaster/>
   </StrictMode>
 );

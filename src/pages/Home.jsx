@@ -13,7 +13,7 @@ const Home = () => {
      <div className="border border-gray-300 rounded-3xl px-2 pt-2">
      <div className="bg-bannerColor rounded-3xl relative">
         {
-          pathname === "/" && <Navbar></Navbar>
+         ( pathname === "/" || pathname.includes("/category")) && <Navbar></Navbar>
         }
         <Banner></Banner>
       <div className="absolute lg:top-[450px] lg:left-48 top-96">
