@@ -1,6 +1,7 @@
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
 
 const Navbar = () => {
 
@@ -26,7 +27,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-3"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-40 p-4 shadow space-y-3"
           >
             <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
               Home
@@ -43,20 +44,20 @@ const Navbar = () => {
         </div>
         <div className="flex items-center">
           <img className="w-10 rounded-lg hidden md:block" src="/assets/banner.jpg" alt="Logo" />
-        <Link to={'/'} className="btn btn-ghost md:text-2xl text-xl font-bold">Gadget Heaven</Link>
+        <Link to={'/'} className={`btn btn-ghost md:text-2xl text-xl font-bold ${location.pathname === '/' ? "text-white" : ""}`}>Gadget Heaven</Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-8">
-          <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
+        <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white underline" : ""}`}>
             Home
           </NavLink>
 
-          <NavLink to="/statistics" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
+          <NavLink to="/statistics" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
             Statistics
           </NavLink>
 
-          <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
+          <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
             Dashboard
           </NavLink>
         </ul>

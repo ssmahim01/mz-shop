@@ -6,17 +6,17 @@ import Navbar from "../components/Navbar";
 
 const Home = () => {
   const categories = useLoaderData();
-  const {pathName} = useLocation();
+  const {pathname} = useLocation();
 
   return (
-    <div className="w-11/12 mx-auto">
-     <div className="border border-gray-300 rounded-3xl px-2">
+    <div className="w-11/12 mx-auto pt-4">
+     <div className="border border-gray-300 rounded-3xl px-2 pt-2">
      <div className="bg-bannerColor rounded-3xl relative">
         {
-          pathName === "/" && <Navbar></Navbar>
+          pathname === "/" && <Navbar></Navbar>
         }
         <Banner></Banner>
-      <div className="absolute lg:top-96 lg:left-48 top-80">
+      <div className="absolute lg:top-[450px] lg:left-48 top-96">
         <BannerImg></BannerImg>
       </div>
       </div>

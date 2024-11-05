@@ -2,6 +2,7 @@ import { FaSquareFull } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router-dom";
+import { addCartList, addWishlist } from "../utilities/localStorageData";
 
 const ProductDetails = () => {
   const products = useLoaderData();
@@ -21,12 +22,12 @@ const ProductDetails = () => {
   } = product || {};
 
   const handleCart = (id) => {
-    console.log(id);
-  }
+    addCartList(id);
+  };
 
   const handleWishlist = (id) => {
-    console.log(id);
-  }
+    addWishlist(id);
+  };
 
   return (
     <div className="lg:pb-0 md:pb-[840px] pb-[680px]">
@@ -42,7 +43,7 @@ const ProductDetails = () => {
       </div>
 
       <div className="absolute lg:top-60 md:top-64 top-72 lg:left-48 md:left-24 left-10 md:w-3/4 w-4/5 bg-white rounded-3xl flex flex-col lg:flex-row justify-between items-center gap-8 p-5">
-        <figure className="lg:w-1/2">
+        <figure className="lg:w-1/2 w-full">
           <img
             className="lg:w-[420px] lg:h-[505px] w-full rounded-2xl"
             src={product_image}
