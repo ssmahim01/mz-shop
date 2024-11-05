@@ -1,8 +1,9 @@
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+
   return (
     <div className="navbar lg:px-10">
       <div className="navbar-start">

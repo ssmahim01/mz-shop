@@ -1,16 +1,20 @@
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData, useLocation } from "react-router-dom";
 import Banner from "../components/Banner";
 import BannerImg from "../components/BannerImg";
 import Categories from "../components/Categories";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const categories = useLoaderData();
+  const {pathName} = useLocation();
 
   return (
     <div className="w-11/12 mx-auto">
      <div className="border border-gray-300 rounded-3xl px-2">
      <div className="bg-bannerColor rounded-3xl relative">
-        {/* <Navbar></Navbar> */}
+        {
+          pathName === "/" && <Navbar></Navbar>
+        }
         <Banner></Banner>
       <div className="absolute lg:top-96 lg:left-48 top-80">
         <BannerImg></BannerImg>
