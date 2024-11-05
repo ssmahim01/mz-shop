@@ -1,6 +1,6 @@
 import { RxCrossCircled } from "react-icons/rx";
 
-const WishList = ({ wishlists }) => {
+const WishList = ({ wishlists, handleDeleteWishlist }) => {
   return (
     <div className="w-4/5 mx-auto py-12">
       <h2 className="text-2xl font-bold md:text-left text-center">Wishlist</h2>
@@ -36,7 +36,7 @@ const WishList = ({ wishlists }) => {
                 Add to Cart
               </button>
             </div>
-            <div className="text-rose-500 text-3xl mr-14">
+            <div onClick={() => handleDeleteWishlist(wishlist.product_id)} className="text-rose-500 text-3xl mr-14 hover:cursor-pointer">
               <RxCrossCircled />
             </div>
           </div>

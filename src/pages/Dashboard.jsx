@@ -1,14 +1,34 @@
 import { useEffect, useState } from "react";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { getStoredCart, getStoredWishlist } from "../utilities/localStorageData";
 import ShopCart from "../components/ShopCart";
 import WishList from "../components/WishList";
+import toast from "react-hot-toast";
 
 const Dashboard = () => {
   const products = useLoaderData();
   
   const [carts, setCarts] = useState([]);
   const [wishlists, setWishlists] = useState([]);
+
+   const handleSortItems = () => {
+      const sortedCarts = [...carts].sort((a, b) => b.price - a.price);
+      setCarts(sortedCarts);
+   };
+
+   const handleDeleteCart = (id) => {
+    const deleteItems = carts.filter(cart => cart.product_id != id);
+    localStorage.removeItem("cart", deleteItems);
+    setCarts(deleteItems);
+    toast.success('Deleted Successfully');
+ };
+
+   const handleDeleteWishlist = (id) => {
+    const deleteItems = wishlists.filter(wishlist => wishlist.product_id != id);
+    localStorage.removeItem("wishlist", deleteItems);
+    setWishlists(deleteItems);
+    toast.success('Deleted Successfully');
+ };
 
   const [active, setActive] = useState(true);
 
@@ -18,7 +38,7 @@ const Dashboard = () => {
     }else{
       setActive(false);
     }
-  }
+  };
 
   useEffect(() => {
     const storedCarts = getStoredCart();
@@ -48,7 +68,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-     {active ? <ShopCart carts={carts}></ShopCart> : <WishList wishlists={wishlists}></WishList>}
+     {active ? <ShopCart carts={carts} handleSortItems={handleSortItems} handleDeleteCart={handleDeleteCart}></ShopCart> : <WishList wishlists={wishlists} handleDeleteWishlist={handleDeleteWishlist}></WishList>}
   </div>;
 };
 
