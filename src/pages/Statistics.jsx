@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 const Statistics = () => {
+
+  useEffect(() => {
+    document.title= 'Statistics' + '/Gadget Heaven';
+  }, "");
+
   return (
     <div>
       <div className="bg-bannerColor lg:px-36 px-12 py-10 relative">

@@ -52,6 +52,10 @@ const Dashboard = () => {
     setWishlists(allWishlists);
   }, []);
 
+  useEffect(() => {
+    document.title = 'Dashboard' + '/Gadget Heaven';
+  }, "");
+
   return <div>
     <div className="bg-bannerColor lg:px-36 px-12 py-12 relative">
         <div className="flex flex-col justify-center items-center text-center gap-4 lg:px-56 md:px-8">

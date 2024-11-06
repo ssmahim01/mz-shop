@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { RxCrossCircled } from "react-icons/rx";
 
 const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
-   const [sum, setSum] = useState(0);
-  useEffect( () => {
-      const sumAllPrices = carts.reduce((prev, current) => prev + current.price, 0);
-      setSum(sumAllPrices);
-   }, [carts]);
+  const [sum, setSum] = useState(0);
+  useEffect(() => {
+    const sumAllPrices = carts.reduce(
+      (prev, current) => prev + current.price,
+      0
+    );
+    setSum(sumAllPrices);
+  }, [carts]);
 
   return (
     <div className="w-4/5 mx-auto py-12">
@@ -15,17 +19,46 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
 
         <div className="flex md:justify-normal justify-center items-center flex-wrap gap-3">
           <h2 className="lg:text-xl text-lg font-bold">Total Cost: {sum}</h2>
-          <button onClick={handleSortItems} className="btn lg:px-6 px-4 border-2 border-btnBorder text-textColor rounded-full bg-white font-semibold">
+          <button
+            onClick={handleSortItems}
+            className="btn lg:px-6 px-4 border-2 border-btnBorder text-textColor rounded-full bg-white font-semibold"
+          >
             Sort by Price <img src="/assets/Frame.jpeg" alt="Frame" />
           </button>
-          <button className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
+          <button onClick={({sum}) => ` ${sum !== 0 ? document.getElementById("purchase_modal").showModal() : toast.error('Purchase Failed')}`} className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
             Purchase
           </button>
+
+          <dialog
+            id="purchase_modal"
+            className="modal modal-middle"
+          >
+            <div className="modal-box flex flex-col justify-center items-center gap-3 py-10">
+              <div>
+              <img src="/public/assets/Group.png" alt="Success Img" />
+              </div>
+              <h2 className="py-4 md:w-96 text-2xl font-bold border-b border-gray-200">
+                Payment Successfully
+              </h2>
+              <div className="space-y-2 pt-3">
+              <p className="text-gray-500 font-medium">Thanks for Purchasing.</p>
+              <p className="text-gray-500 font-medium">Total:{sum}</p>
+              </div>
+              <div className="modal-action">
+                <form method="dialog">
+                  <button className="btn bg-gray-200 md:px-44 px-36 rounded-full font-semibold">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>
       </div>
 
       {carts.map((cart) => (
-        <div key={cart.product_id} className="w-full bg-white rounded-2xl p-6 my-5">
+        <div
+          key={cart.product_id}
+          className="w-full bg-white rounded-2xl p-6 my-5"
+        >
           <div className="flex justify-between md:flex-row flex-col gap-7">
             <div>
               <img
@@ -39,13 +72,16 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
                 {cart.product_title}
               </h2>
               <p className="md:text-lg text-gray-500 font-medium">
-               {cart.description}
+                {cart.description}
               </p>
               <p className="lg:text-xl text-lg text-gray-700 font-semibold">
                 Price: ${parseFloat(cart.price)}
               </p>
             </div>
-            <div onClick={() => handleDeleteCart(cart.product_id)} className="text-rose-500 text-3xl lg:mr-20 mr-12 hover:cursor-pointer">
+            <div
+              onClick={() => handleDeleteCart(cart.product_id)}
+              className="text-rose-500 text-3xl lg:mr-20 mr-12 hover:cursor-pointer"
+            >
               <RxCrossCircled />
             </div>
           </div>

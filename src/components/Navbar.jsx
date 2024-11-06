@@ -2,9 +2,7 @@ import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 
-
 const Navbar = () => {
-
   return (
     <div className="navbar lg:px-10">
       <div className="navbar-start">
@@ -40,6 +38,10 @@ const Navbar = () => {
             <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
               Dashboard
             </NavLink>
+
+            <NavLink to="/products" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
+            Products
+          </NavLink>
           </ul>
         </div>
         <div className="flex items-center">
@@ -60,10 +62,14 @@ const Navbar = () => {
           <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
             Dashboard
           </NavLink>
+
+          <NavLink to="/products" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
+            Products
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end space-x-4">
-       <Link className="border border-gray-200 bg-white rounded-full p-3 text-lg"><BsCart3 /></Link>
+       <Link className="border border-gray-200 bg-white rounded-full p-3 text-lg"><BsCart3 /> </Link>
        <Link className="border border-gray-200 bg-white rounded-full p-3 text-lg"><FiHeart /></Link>
       </div>
     </div>
