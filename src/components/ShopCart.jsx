@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 import { RxCrossCircled } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
   const handleClose = () => {
     setShowModal(true);
     navigate('/');
-    
+    handleDeleteCart();
   };
 
   useEffect(() => {
@@ -26,6 +25,10 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
     );
     setSum(sumAllPrices);
   }, [carts]);
+
+  useEffect(() => {
+    document.title = "Cart" + "/Dashboard" + '/Gadget Heaven';
+  }, "");
 
   return (
     <div className="w-4/5 mx-auto py-12">
@@ -72,12 +75,18 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
       {carts.map((cart) => (
         <div
           key={cart.product_id}
-          className="w-full bg-white rounded-2xl p-6 my-5"
+          className="w-full bg-white rounded-2xl p-6 my-8"
         >
-          <div className="flex justify-between md:flex-row flex-col gap-7">
+          <div className="flex justify-between lg:flex-row flex-col lg:gap-7 gap-4">
+          <div
+              onClick={() => handleDeleteCart(cart.product_id)}
+              className="text-rose-500 text-3xl hover:cursor-pointer lg:hidden block"
+            >
+              <RxCrossCircled />
+            </div>
             <div>
               <img
-                className="lg:w-60 md:w-64 lg:h-32 md:h-52 rounded-xl"
+                className="lg:w-60 w-full lg:h-32 md:h-64 rounded-xl"
                 src={cart.product_image}
                 alt={cart.product_title}
               />
@@ -95,7 +104,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
             </div>
             <div
               onClick={() => handleDeleteCart(cart.product_id)}
-              className="text-rose-500 text-3xl lg:mr-20 mr-12 hover:cursor-pointer"
+              className="text-rose-500 text-3xl lg:mr-20 mr-12 hover:cursor-pointer lg:block hidden"
             >
               <RxCrossCircled />
             </div>

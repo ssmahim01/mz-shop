@@ -14,6 +14,7 @@ const Categories = ({ categories }) => {
       </NavLink>
       
       {categories.map((category) => (
+
         <NavLink
           key={category.product_id}
           to={`/category/${category.category}`}

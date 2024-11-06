@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { RxCrossCircled } from "react-icons/rx";
 
 const WishList = ({ wishlists, handleDeleteWishlist }) => {
+
+  useEffect(() => {
+    document.title = "Wishlist" + "/Dashboard" + '/Gadget Heaven';
+  }, "");
+
   return (
     <div className="w-4/5 mx-auto py-12">
       <h2 className="text-2xl font-bold md:text-left text-center">Wishlist</h2>
@@ -10,10 +16,13 @@ const WishList = ({ wishlists, handleDeleteWishlist }) => {
           key={wishlist.product_id}
           className="w-full bg-white rounded-2xl p-6 my-5"
         >
-          <div className="flex flex-col md:flex-row justify-between gap-7">
+          <div className="flex flex-col lg:flex-row justify-between lg:gap-7 gap-4">
+          <div onClick={() => handleDeleteWishlist(wishlist.product_id)} className="text-rose-500 text-3xl mr-14 hover:cursor-pointer lg:hidden block">
+              <RxCrossCircled />
+            </div>
             <div>
               <img
-                className="md:w-72 lg:h-48 md:h-56 rounded-xl"
+                className="lg:w-72 w-full lg:h-48 md:h-64 rounded-xl"
                 src={wishlist.product_image}
                 alt={wishlist.product_title}
               />
@@ -36,7 +45,7 @@ const WishList = ({ wishlists, handleDeleteWishlist }) => {
                 Add to Cart
               </button>
             </div>
-            <div onClick={() => handleDeleteWishlist(wishlist.product_id)} className="text-rose-500 text-3xl mr-14 hover:cursor-pointer">
+            <div onClick={() => handleDeleteWishlist(wishlist.product_id)} className="text-rose-500 text-3xl mr-14 hover:cursor-pointer lg:block hidden">
               <RxCrossCircled />
             </div>
           </div>

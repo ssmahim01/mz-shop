@@ -13,7 +13,7 @@ const Home = () => {
   }, "");
 
   return (
-    <div className="w-11/12 mx-auto pt-4">
+    <div className="w-11/12 mx-auto pt-2">
      <div className="border border-gray-300 rounded-3xl px-2 pt-2">
      <div className="bg-bannerColor rounded-3xl relative">
        <Navbar></Navbar>

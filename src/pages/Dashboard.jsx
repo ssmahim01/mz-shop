@@ -20,7 +20,7 @@ const Dashboard = () => {
     const deleteItems = carts.filter(cart => cart.product_id != id);
     localStorage.removeItem("cart", deleteItems);
     setCarts(deleteItems);
-    toast.success('Deleted Successfully');
+    toast.success('Successfully Completed');
  };
 
    const handleDeleteWishlist = (id) => {

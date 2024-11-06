@@ -1,4 +1,14 @@
-# React + Vite
+# Project Name
+
+<b>Gadget Heaven</b>
+<br>
+
+# Live Link
+
+<b>Live Of The Project:</b> https://the-gadget.netlify.app/
+<br>
+
+# Setup
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
