@@ -1,9 +1,24 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { RxCrossCircled } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
   const [sum, setSum] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
+  const handleItemsPurchase = () => {
+    setShowModal(true);
+    document.getElementById("purchase_modal").showModal();
+  };
+
+  const handleClose = () => {
+    setShowModal(true);
+    navigate('/');
+    
+  };
+
   useEffect(() => {
     const sumAllPrices = carts.reduce(
       (prev, current) => prev + current.price,
@@ -25,7 +40,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
           >
             Sort by Price <img src="/assets/Frame.jpeg" alt="Frame" />
           </button>
-          <button onClick={({sum}) => ` ${sum !== 0 ? document.getElementById("purchase_modal").showModal() : toast.error('Purchase Failed')}`} className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
+          <button onClick={handleItemsPurchase} className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold" disabled={carts.length === 0 && sum === 0}>
             Purchase
           </button>
 
@@ -35,7 +50,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
           >
             <div className="modal-box flex flex-col justify-center items-center gap-3 py-10">
               <div>
-              <img src="/public/assets/Group.png" alt="Success Img" />
+              <img src="/assets/Group.png" alt="Success Img" />
               </div>
               <h2 className="py-4 md:w-96 text-2xl font-bold border-b border-gray-200">
                 Payment Successfully
@@ -46,7 +61,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
               </div>
               <div className="modal-action">
                 <form method="dialog">
-                  <button className="btn bg-gray-200 md:px-44 px-36 rounded-full font-semibold">Close</button>
+                  <button onClick={handleClose} className="btn bg-gray-200 md:px-44 px-36 rounded-full font-semibold">Close</button>
                 </form>
               </div>
             </div>

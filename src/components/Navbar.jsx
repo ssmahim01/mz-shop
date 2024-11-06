@@ -25,6 +25,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
+          
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-40 p-4 shadow space-y-3"
           >
             <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-extrabold" : "hover:text-textColor"}`}>
@@ -39,31 +40,31 @@ const Navbar = () => {
               Dashboard
             </NavLink>
 
-            <NavLink to="/products" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
+            <NavLink to="/products" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""}`}>
             Products
           </NavLink>
           </ul>
         </div>
         <div className="flex items-center">
           <img className="w-10 rounded-lg hidden md:block" src="/assets/banner.jpg" alt="Logo" />
-        <Link to={'/'} className={`btn btn-ghost md:text-2xl text-xl font-bold ${location.pathname === '/' ? "text-white" : ""}`}>Gadget Heaven</Link>
+        <Link to={'/'} className={`btn btn-ghost md:text-2xl text-xl font-bold ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white" : ""}`}>Gadget Heaven</Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-8">
-        <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white underline" : ""}`}>
+        <NavLink to="/" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white underline" : ""}`}>
             Home
           </NavLink>
 
-          <NavLink to="/statistics" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
+          <NavLink to="/statistics" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white" : ""}`}>
             Statistics
           </NavLink>
 
-          <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
+          <NavLink to="/dashboard" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white" : ""}`}>
             Dashboard
           </NavLink>
 
-          <NavLink to="/products" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${location.pathname === '/' ? "text-white" : ""}`}>
+          <NavLink to="/products" className={({ isActive }) => `text-gray-700 font-medium ${isActive ? "text-textColor font-bold" : ""} ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white" : ""}`}>
             Products
           </NavLink>
         </ul>

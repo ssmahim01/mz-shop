@@ -1,24 +1,43 @@
+import ReactStars from "react-rating-stars-component";
 import { FaSquareFull } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addCartList, addWishlist } from "../utilities/localStorageData";
+import {
+  addCartList,
+  addWishlist,
+  getStoredWishlist,
+} from "../utilities/localStorageData";
+import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
   const products = useLoaderData();
   const { product_id } = useParams();
+  const [isWishlist, setIsWishlist] = useState(false);
+
+  useEffect(() => {
+    const data = products.find((product) => product.product_id == product_id);
+    const getWishlist = getStoredWishlist();
+    const isExist = getWishlist.find(
+      (wishlist) => wishlist.product_id == data.product_id
+    );
+
+    if (isExist) {
+      setIsWishlist(true);
+    }
+  }, [products, product_id]);
 
   const product = products.find((product) => product.product_id === product_id);
 
   const {
-    product_id : productId,
+    product_id: productId,
     product_title,
     product_image,
     price,
     description,
     Specification,
     availability,
-    rating
+    rating,
   } = product || {};
 
   const handleCart = (id) => {
@@ -27,6 +46,7 @@ const ProductDetails = () => {
 
   const handleWishlist = (id) => {
     addWishlist(id);
+    setIsWishlist(true);
   };
 
   return (
@@ -71,7 +91,10 @@ const ProductDetails = () => {
             <h3 className="text-lg font-bold">Specification:</h3>
             {Specification.map((item, index) => (
               <p key={index} className="text-gray-500 font-medium mt-3">
-                <p><span>{index + 1}.</span><span> {item}</span></p>
+                <p>
+                  <span>{index + 1}.</span>
+                  <span> {item}</span>
+                </p>
               </p>
             ))}
 
@@ -80,43 +103,34 @@ const ProductDetails = () => {
                 Rating <FaSquareFull />
               </h2>
               <div className="flex items-center gap-5">
-                <div className="rating space-x-2">
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-rating"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-rating"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-rating"
-                    />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-rating"
-                    defaultChecked
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-rating"
-                  />
-                </div>
+                
+              <ReactStars
+                  count={5}
+                  value={rating}
+                  size={30}
+                  activeColor="#ffd700"
+                />
+                
                 <button className="text-sm px-4 py-2 bg-gray-100 hover:cursor-pointer rounded-3xl text-gray-700 font-medium">
                   {rating}
                 </button>
               </div>
 
               <div className="pt-2 flex items-center gap-4">
-                <button onClick={() => handleCart(productId)} className="btn text-white text-base font-bold bg-purple-600 px-6 rounded-full">Add To Cart <MdOutlineShoppingCart className="text-xl"/></button>
+                <button
+                  onClick={() => handleCart(productId)}
+                  className="btn text-white text-base font-bold bg-purple-600 px-6 rounded-full"
+                >
+                  Add To Cart <MdOutlineShoppingCart className="text-xl" />
+                </button>
 
-                <button onClick={() => handleWishlist(productId)} className="p-3 bg-white border border-gray-200 rounded-full text-xl"><FiHeart /></button>
+                <button
+                  onClick={() => handleWishlist(productId)}
+                  className="p-3 bg-white border border-gray-200 rounded-full text-xl"
+                  disabled={isWishlist}
+                >
+                  <FiHeart />
+                </button>
               </div>
             </div>
           </div>
