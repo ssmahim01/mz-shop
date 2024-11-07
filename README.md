@@ -10,7 +10,7 @@
 
 # Requirement Document Link
 
-<b>DOC Link:</b> file:///C:/Mission-Of-Mahim/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf
+<b>DOC Link:</b> https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf
 <br>
 
 # React Fundamental Concepts
