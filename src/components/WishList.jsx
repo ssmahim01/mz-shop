@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import { RxCrossCircled } from "react-icons/rx";
 import { toast } from "react-toastify";
 import { addCartList, getStoredCart } from "../utilities/localStorageData";
-import { useEffect } from "react";
 
 const WishList = ({ wishlists, handleDeleteWishlist, carts }) => {
 
