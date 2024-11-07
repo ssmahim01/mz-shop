@@ -1,21 +1,8 @@
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { RxCrossCircled } from "react-icons/rx";
-import { toast } from "react-toastify";
-import { addCartList, getStoredCart } from "../utilities/localStorageData";
 
-const WishList = ({ wishlists, handleDeleteWishlist, carts }) => {
-
-  const handleAddCart = (id) => {
-    const deleteItems = wishlists.filter(wishlist => wishlist.product_id != id);
-    localStorage.removeItem("wishlist", deleteItems);
-        const storedCartList = getStoredCart();
-    const cartList = carts.filter(cart => storedCartList.includes(cart.product_id));
-    addCartList(cartList);
-    toast.success("Successfully Added", {
-      position: "top-center"
-    });
-  }
+const WishList = ({ wishlists, handleDeleteWishlist }) => {
 
   return (
     <div className="w-4/5 mx-auto py-12">
@@ -55,7 +42,7 @@ const WishList = ({ wishlists, handleDeleteWishlist, carts }) => {
                 Price: ${parseFloat(wishlist.price)}
               </p>
 
-              <button onClick={() => handleAddCart(wishlists.product_id)} className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
+              <button className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
                 Add to Cart
               </button>
             </div>
@@ -71,7 +58,6 @@ const WishList = ({ wishlists, handleDeleteWishlist, carts }) => {
 
 WishList.propTypes = {
   wishlists: PropTypes.array,
-  carts: PropTypes.array,
   handleDeleteWishlist: PropTypes.func
 }
 

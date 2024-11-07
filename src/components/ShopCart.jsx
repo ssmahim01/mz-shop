@@ -39,7 +39,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
         <h2 className="text-2xl font-bold">Cart</h2>
 
         <div className="flex md:justify-normal justify-center items-center flex-wrap gap-3">
-          <h2 className="lg:text-xl text-lg font-bold">Total Cost: {sum}</h2>
+          <h2 className="lg:text-xl text-lg font-bold">Total Price: {sum}</h2>
           <button
             onClick={handleSortItems}
             className="btn lg:px-6 px-4 border-2 border-btnBorder text-textColor rounded-full bg-white font-semibold"

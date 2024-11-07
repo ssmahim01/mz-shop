@@ -77,7 +77,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-     {active ? <ShopCart carts={carts} handleSortItems={handleSortItems} handleDeleteCart={handleDeleteCart}></ShopCart> : <WishList carts={carts} wishlists={wishlists} handleDeleteWishlist={handleDeleteWishlist}></WishList>}
+     {active ? <ShopCart carts={carts} handleSortItems={handleSortItems} handleDeleteCart={handleDeleteCart}></ShopCart> : <WishList wishlists={wishlists} handleDeleteWishlist={handleDeleteWishlist}></WishList>}
   </div>;
 };
 

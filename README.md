@@ -15,31 +15,37 @@
 
 # React Fundamental Concepts
 
-<li><b>Props:</b> Props is short for "properties". They are inputs that allow data to be passed into components.</li>
+<li><b>Props:</b> Props is short for "properties". Props are used to pass data parent component to child components for communication and data flow.</li>
 
-<li><b>State:</b> An object within components that stores dynamic, changeable data for rendering UI.</li>
+<li><b>State Management:</b> React's (useState) hook is used to manage local component state for items in the cart and wishlist.This allows dynamic updates cart and wishlist items based on user actions.</li>
 
 <li><b>Hooks:</b> Special functions like (useState, useEffect) that let me manage state and side effects in functional components.</li>
 
-<li><b>Conditional Rendering:</b> Rendering different UI elements based on certain conditions.</li>
+<li><b>Conditional Rendering:</b> Conditional Rendering can be used for show or hide components. Rendering different UI elements based on certain conditions.</li>
 
-<li><b>Event Handling:</b> Handling user interactions, like clicks and using functions.</li>
+<li><b>Event Handling:</b> Event handlers are used for actions like adding items to the cart and wishlist, Deleting items from the cart and wishlist.</li>
 <br>
 
 # Handling and Managing Data
 
-<b>Props Drilling: </b>Props Drill for pass data to components or others then used.
+<b>Local State (useState):</b> For managing the cart and wishlist items within the Dashboard component.
+<br>
+<b>Props Drilling: </b>Used for pass data to components or others then used.
 <br> 
 <b>Local Storage:</b> Used Local Storage to stored data then manage.
 <br>
 
 # 5 Features of the Project
 
-<li><b>Conditional Statement</b> Used if, else conditions to manage data.Also used dynamic condition.</li>
-
 <li><b>Navigate and Navigation:</b> Used Navigate for manage path to go one page to another page. And used Navigation for control loading.</li>
 
-<li><b>Props:</b> Props is short for "properties". They are inputs that allow data to be passed into components.</li>
+<li><b>Cart and Wishlist Management:</b> Users can add items to the Cart or Wishlist from Product Details.</li>
+
+<li><b>Quantity and Total Price Control in Cart:</b> Users can increase and decrease the quantity of each item in the Cart.Total Price will be automatically calculated and displayed based on the items and quantities.</li>
+
+<li><b>Data Storage:</b> Cart and Wishlist data will be saved in local storage, so users can return to their items even after a session ends.</li>
+
+<li><b>Filtering and Sorting:</b> Users can filter products by category or other criteria to find specific items.Sorting options based on price.Users can click the Sort by Price button then sort the items by descending order.</li>
 
 # Setup
 
