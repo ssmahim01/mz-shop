@@ -10,6 +10,7 @@ import {
 } from "../utilities/localStorageData";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const products = useLoaderData();
@@ -42,7 +43,11 @@ const ProductDetails = () => {
   } = product || {};
 
   const handleCart = (id) => {
-    addCartList(id);
+    if(availability){
+      addCartList(id);
+    }else{
+      toast.error("Item is not available");
+    }
   };
 
   const handleWishlist = (id) => {

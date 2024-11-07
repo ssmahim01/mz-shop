@@ -47,14 +47,14 @@ const Dashboard = () => {
 
   useEffect(() => {
     const storedCarts = getStoredCart();
-    const allCarts = products.filter(product => storedCarts.includes(product.product_id));
-    setCarts(allCarts);
+    const cartList = products.filter(product => storedCarts.includes(product.product_id));
+    setCarts(cartList);
   }, [products]);
 
   useEffect(() => {
     const storedWishlists = getStoredWishlist();
-    const allWishlists = products.filter(product => storedWishlists.includes(product.product_id));
-    setWishlists(allWishlists);
+    const wishlistItems = products.filter(product => storedWishlists.includes(product.product_id));
+    setWishlists(wishlistItems);
   }, [products]);
 
   return <div>

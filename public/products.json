@@ -8,7 +8,7 @@
     "description": "Lightweight and powerful ultrabook with 16GB RAM and 512GB SSD.",
     "Specification": ["Intel i7 processor", "16GB RAM", "512GB SSD", "15-inch display"],
     "availability": true,
-    "rating": 4.5
+    "rating": 3.8
   },
   {
     "product_id": "L002",
@@ -85,7 +85,7 @@
     "description": "Google's newest phone with great camera features and clean Android experience.",
     "Specification": ["Google Tensor chip", "8GB RAM", "128GB Storage", "6.4-inch display"],
     "availability": true,
-    "rating": 4.5
+    "rating": 3.5
   },
   {
     "product_id": "P003",
@@ -96,7 +96,7 @@
     "description": "Compact IPhone model with A13 Bionic chip and classic design.",
     "Specification": ["A13 Bionic chip", "64GB Storage", "4.7-inch display"],
     "availability": false,
-    "rating": 4.1
+    "rating": 3.7
   },
   {
     "product_id": "A001",
@@ -195,6 +195,6 @@
     "description": "Compact version of IPhone 13 with the same powerful features.",
     "Specification": ["A15 Bionic chip", "128GB Storage", "5.4-inch display", "Dual-camera system"],
     "availability": false,
-    "rating": 4.5
+    "rating": 3.7
   }
 ]
