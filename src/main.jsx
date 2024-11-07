@@ -9,8 +9,10 @@ import Home from "./pages/Home";
 import Cards from "./components/Cards";
 import ErrorElement from "./Error/ErrorElement";
 import ProductDetails from "./components/productDetails";
-import { Toaster } from "react-hot-toast";
 import LayoutItems from "./layouts/LayoutItems";
+import Products from "./pages/Products";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -59,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: '/products',
         loader: () => fetch('../products.json'),
-        element: <Cards></Cards>
+        element: <Products></Products>
       },
     ],
   }
@@ -68,6 +70,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-    <Toaster/>
+    <ToastContainer/>
   </StrictMode>
 );

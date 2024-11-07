@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Statistics = () => {
 
-  useEffect(() => {
-    document.title= 'Statistics' + '/Gadget Heaven';
-  }, "");
-
   return (
     <div>
+        <Helmet>
+        <title>Statistics - Gadget Heaven</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="bg-bannerColor lg:px-36 px-12 py-10 relative">
         <div className="flex flex-col justify-center items-center text-center gap-4 lg:px-56 md:px-8">
           <h2 className="text-3xl text-white font-bold">Statistics</h2>

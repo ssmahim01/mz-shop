@@ -1,9 +1,9 @@
-import React from "react";
 import Footer from "../components/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const LayoutItems = () => {
+  const navigation = useNavigation();
   // const {pathname} = useLocation();
 // console.log(pathname);
 // console.log(!(pathname.includes("/category")));
@@ -14,7 +14,9 @@ const LayoutItems = () => {
       <Navbar></Navbar> 
       </div>
         <div className="min-h-[calc(100vh+80px)]">
-         <Outlet />
+        {
+        navigation.state === 'loading' ? <p className="text-center text-gray-500 text-2xl font-medium my-4">loading...</p> : <Outlet></Outlet>
+      }
         </div>
       <Footer />
     </div>

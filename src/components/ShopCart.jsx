@@ -1,21 +1,28 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { RxCrossCircled } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
   const [sum, setSum] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  const [ showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleItemsPurchase = () => {
+    showModal;
     setShowModal(true);
     document.getElementById("purchase_modal").showModal();
   };
 
-  const handleClose = () => {
+  const handleClose = (id) => {
     setShowModal(true);
     navigate('/');
-    handleDeleteCart();
+    const deleteItems = carts.filter(cart => cart.product_id != id);
+    localStorage.removeItem("cart", deleteItems);
+    toast.success("Successfully Purchased", {
+      position: "top-center"
+    });
   };
 
   useEffect(() => {
@@ -25,10 +32,6 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
     );
     setSum(sumAllPrices);
   }, [carts]);
-
-  useEffect(() => {
-    document.title = "Cart" + "/Dashboard" + '/Gadget Heaven';
-  }, "");
 
   return (
     <div className="w-4/5 mx-auto py-12">
@@ -64,7 +67,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
               </div>
               <div className="modal-action">
                 <form method="dialog">
-                  <button onClick={handleClose} className="btn bg-gray-200 md:px-44 px-36 rounded-full font-semibold">Close</button>
+                  <button onClick={() => handleClose(carts.product_id)} className="btn bg-gray-200 md:px-44 px-36 rounded-full font-semibold">Close</button>
                 </form>
               </div>
             </div>
@@ -114,5 +117,11 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
     </div>
   );
 };
+
+ShopCart.propTypes = {
+  carts: PropTypes.array,
+  handleSortItems: PropTypes.func,
+  handleDeleteCart: PropTypes.func
+}
 
 export default ShopCart;

@@ -3,7 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredCart, getStoredWishlist } from "../utilities/localStorageData";
 import ShopCart from "../components/ShopCart";
 import WishList from "../components/WishList";
-import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const products = useLoaderData();
@@ -20,14 +21,18 @@ const Dashboard = () => {
     const deleteItems = carts.filter(cart => cart.product_id != id);
     localStorage.removeItem("cart", deleteItems);
     setCarts(deleteItems);
-    toast.success('Successfully Completed');
+    toast.success("Deleted Successfully", {
+      position: "top-center"
+    });
  };
 
    const handleDeleteWishlist = (id) => {
     const deleteItems = wishlists.filter(wishlist => wishlist.product_id != id);
     localStorage.removeItem("wishlist", deleteItems);
     setWishlists(deleteItems);
-    toast.success('Deleted Successfully');
+    toast.success("Deleted Successfully", {
+      position: "top-center"
+    });
  };
 
   const [active, setActive] = useState(true);
@@ -44,19 +49,19 @@ const Dashboard = () => {
     const storedCarts = getStoredCart();
     const allCarts = products.filter(product => storedCarts.includes(product.product_id));
     setCarts(allCarts);
-  }, []);
+  }, [products]);
 
   useEffect(() => {
     const storedWishlists = getStoredWishlist();
     const allWishlists = products.filter(product => storedWishlists.includes(product.product_id));
     setWishlists(allWishlists);
-  }, []);
-
-  useEffect(() => {
-    document.title = 'Dashboard' + '/Gadget Heaven';
-  }, "");
+  }, [products]);
 
   return <div>
+     <Helmet>
+        <title>Dashboard - Gadget Heaven</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
     <div className="bg-bannerColor lg:px-36 px-12 py-12 relative">
         <div className="flex flex-col justify-center items-center text-center gap-4 lg:px-56 md:px-8">
           <h2 className="text-3xl text-white font-bold">Dashboard</h2>
@@ -72,7 +77,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-     {active ? <ShopCart carts={carts} handleSortItems={handleSortItems} handleDeleteCart={handleDeleteCart}></ShopCart> : <WishList wishlists={wishlists} handleDeleteWishlist={handleDeleteWishlist}></WishList>}
+     {active ? <ShopCart carts={carts} handleSortItems={handleSortItems} handleDeleteCart={handleDeleteCart}></ShopCart> : <WishList carts={carts} wishlists={wishlists} handleDeleteWishlist={handleDeleteWishlist}></WishList>}
   </div>;
 };
 

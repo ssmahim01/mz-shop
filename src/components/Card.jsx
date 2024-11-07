@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Card = ({ product }) => {
@@ -21,5 +22,9 @@ const Card = ({ product }) => {
     </div>
   );
 };
+
+Card.propTypes = {
+  product: PropTypes.object
+}
 
 export default Card;

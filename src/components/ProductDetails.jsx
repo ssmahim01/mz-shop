@@ -9,6 +9,7 @@ import {
   getStoredWishlist,
 } from "../utilities/localStorageData";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
   const products = useLoaderData();
@@ -46,11 +47,15 @@ const ProductDetails = () => {
 
   const handleWishlist = (id) => {
     addWishlist(id);
-    setIsWishlist(true);
+      setIsWishlist(true);
   };
 
   return (
     <div className="lg:pb-0 md:pb-[840px] pb-[680px]">
+      <Helmet>
+        <title>Product Details - Gadget Heaven</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="bg-bannerColor pt-10 lg:px-36 px-12 pb-52 relative">
         <div className="flex flex-col justify-center items-center text-center gap-4 lg:px-56 md:px-8">
           <h2 className="text-3xl text-white font-bold">Product Details</h2>
@@ -90,12 +95,12 @@ const ProductDetails = () => {
           <div>
             <h3 className="text-lg font-bold">Specification:</h3>
             {Specification.map((item, index) => (
-              <p key={index} className="text-gray-500 font-medium mt-3">
+              <div key={index} className="text-gray-500 font-medium mt-3">
                 <p>
                   <span>{index + 1}.</span>
                   <span> {item}</span>
                 </p>
-              </p>
+              </div>
             ))}
 
             <div className="space-y-2 pt-3">
@@ -108,6 +113,7 @@ const ProductDetails = () => {
                   count={5}
                   value={rating}
                   size={30}
+                  edit={false}
                   activeColor="#ffd700"
                 />
                 
