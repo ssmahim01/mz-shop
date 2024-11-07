@@ -45,7 +45,7 @@
 
 <li><b>Data Storage:</b> Cart and Wishlist data will be saved in local storage, so users can return to their items even after a session ends.</li>
 
-<li><b>Filtering and Sorting:</b> Users can filter products by category or other criteria to find specific items.Sorting options based on price.Users can click the Sort by Price button then sort the items by descending order.</li>
+<li><b>Filtering and Sorting:</b> Users can filter products by category or other criteria to find specific items.Sorting options based on price.Users can click the Sort by Price button then sort the items by price in descending order.</li>
 
 # Setup
 

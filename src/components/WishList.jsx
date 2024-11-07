@@ -1,8 +1,20 @@
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { RxCrossCircled } from "react-icons/rx";
+import { addCartList, getStoredCart } from "../utilities/localStorageData";
 
-const WishList = ({ wishlists, handleDeleteWishlist }) => {
+const WishList = ({ wishlists, handleDeleteWishlist, setCarts, setWishlists }) => {
+
+  const handleCart = (id) => {
+      addCartList(id);
+      const updatedCart = getStoredCart();
+      setCarts(updatedCart);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      
+      const updatedWishlist = wishlists.filter(single => single.product_id !== id);
+      setWishlists(updatedWishlist)
+      localStorage.removeItem("wishlist", JSON.stringify(updatedWishlist));
+  };
 
   return (
     <div className="w-4/5 mx-auto py-12">
@@ -42,7 +54,7 @@ const WishList = ({ wishlists, handleDeleteWishlist }) => {
                 Price: ${parseFloat(wishlist.price)}
               </p>
 
-              <button className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
+              <button onClick={() => handleCart(wishlist.product_id)} className="btn lg:px-6 px-4 bg-bannerColor rounded-full text-white font-semibold">
                 Add to Cart
               </button>
             </div>
@@ -58,6 +70,8 @@ const WishList = ({ wishlists, handleDeleteWishlist }) => {
 
 WishList.propTypes = {
   wishlists: PropTypes.array,
+  setCarts: PropTypes.array,
+  setWishlists: PropTypes.array,
   handleDeleteWishlist: PropTypes.func
 }
 
