@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { RxCrossCircled } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -35,6 +36,10 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
 
   return (
     <div className="w-4/5 mx-auto py-12">
+        <Helmet>
+        <title>Cart/Dashboard - Gadget Heaven</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="lg:w-3/4 w-11/12 flex justify-between flex-col lg:flex-row flex-wrap text-center items-center gap-3">
         <h2 className="text-2xl font-bold">Cart</h2>
 
