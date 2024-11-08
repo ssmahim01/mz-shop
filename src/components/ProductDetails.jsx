@@ -51,7 +51,7 @@ const ProductDetails = () => {
   };
 
   const handleWishlist = (id) => {
-    addWishlist(id);
+      addWishlist(id);
       setIsWishlist(true);
   };
 

@@ -14,7 +14,7 @@ const Card = ({ product }) => {
 
       <h2 className="text-xl font-semibold">{product_title}</h2>
 
-      <p className="text-gray-500 font-medium">Price: {price}k</p>
+      <p className="text-gray-500 font-medium">Price: ${price}</p>
 
       <Link to={`/product/${product_id}`}><button className="py-2 px-4 hover:btn-ghost text-sm text-textColor font-semibold border-2 border-btnBorder rounded-full mt-3">
         View Details

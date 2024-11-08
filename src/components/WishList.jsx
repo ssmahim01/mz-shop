@@ -6,15 +6,15 @@ import { addCartList, getStoredCart } from "../utilities/localStorageData";
 const WishList = ({ wishlists, handleDeleteWishlist, setCarts, setWishlists }) => {
 
   const handleCart = (id) => {
-      addCartList(id);
-      const updatedCart = getStoredCart();
-      setCarts(updatedCart);
+    addCartList(id)
+      const updatedCart =  getStoredCart();
       localStorage.setItem("cart", JSON.stringify(updatedCart));
-      
-      const updatedWishlist = wishlists.filter(single => single.product_id !== id);
-      setWishlists(updatedWishlist)
-      localStorage.removeItem("wishlist", JSON.stringify(updatedWishlist));
-  };
+      setCarts(updatedCart);
+
+      const deleteItems = wishlists.filter(wishlist => wishlist.product_id != id);
+      setWishlists(deleteItems);
+    localStorage.removeItem("wishlist", JSON.stringify(deleteItems));
+};
 
   return (
     <div className="w-4/5 mx-auto py-12">
@@ -45,7 +45,7 @@ const WishList = ({ wishlists, handleDeleteWishlist, setCarts, setWishlists }) =
                 {wishlist.product_title}
               </h2>
               <p className="md:text-lg">
-                <span className="font-semibold">Description: </span>{" "}
+                <span className="font-semibold">Description: </span>
                 <span className="text-gray-500 font-medium">
                   {wishlist.description}
                 </span>
