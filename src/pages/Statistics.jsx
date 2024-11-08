@@ -12,7 +12,7 @@ const Statistics = () => {
         <div className="flex flex-col justify-center items-center text-center gap-4 lg:px-56 md:px-8">
           <h2 className="text-3xl text-white font-bold">Statistics</h2>
           <p className="font-medium text-white">
-          Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
+         In this page, You can view statistics of products information.The page has important information of statistics.This will be a comparison of Product Name and Price.
           </p>
         </div>
       </div>

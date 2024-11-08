@@ -66,7 +66,7 @@ const Dashboard = () => {
         <div className="flex flex-col justify-center items-center text-center gap-4 lg:px-56 md:px-8">
           <h2 className="text-3xl text-white font-bold">Dashboard</h2>
           <p className="font-medium text-white">
-          Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
+          The dashboard has two tab, those are Cart and Wishlist.When click the Cart tab it will show items of Cart tabs.And when click the Wishlist tab the tab will show items of Wishlist.
           </p>
 
           <div className="flex justify-center items-center gap-3 mt-4">

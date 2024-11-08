@@ -2,18 +2,21 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { RxCrossCircled } from "react-icons/rx";
 import { addCartList, getStoredCart } from "../utilities/localStorageData";
+import { useNavigate } from "react-router-dom";
 
 const WishList = ({ wishlists, handleDeleteWishlist, setCarts, setWishlists }) => {
 
+  const navigate = useNavigate();
+
   const handleCart = (id) => {
-    addCartList(id)
+    addCartList(id);
       const updatedCart =  getStoredCart();
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
       setCarts(updatedCart);
 
-      const deleteItems = wishlists.filter(wishlist => wishlist.product_id != id);
-      setWishlists(deleteItems);
-    localStorage.removeItem("wishlist", JSON.stringify(deleteItems));
+      const updatedItem = wishlists.filter(wishlist => wishlist.product_id != id);
+      setWishlists(updatedItem);
+
+      navigate('/dashboard');
 };
 
   return (
