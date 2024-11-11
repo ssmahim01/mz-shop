@@ -22,7 +22,7 @@ const WishList = ({ wishlists, handleDeleteWishlist, setCarts, setWishlists }) =
   return (
     <div className="w-4/5 mx-auto py-12">
        <Helmet>
-        <title>Wishlist/Dashboard | MZ Shop</title>
+        <title>Wishlist | Dashboard | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <h2 className="text-2xl font-bold md:text-left text-center">Wishlist</h2>
