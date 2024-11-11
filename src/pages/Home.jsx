@@ -12,26 +12,26 @@ const Home = () => {
   return (
     <div className="w-11/12 mx-auto pt-2">
        <Helmet>
-        <title>Home - Gadget Heaven</title>
+        <title>Home | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
      <div className="border border-gray-300 rounded-3xl px-2 pt-2">
      <div className="bg-bannerColor rounded-3xl relative">
        <Navbar></Navbar>
         <Banner></Banner>
-      <div className="absolute lg:top-[450px] lg:left-48 top-96">
+      <div className="absolute lg:top-[450px] lg:left-48 hidden md:block md:top-96">
         <BannerImg></BannerImg>
       </div>
       </div>
      </div>
       
-      <div className="w-11/12 mx-auto lg:pt-[420px] md:pt-72 pt-44">
+      <div className="w-11/12 mx-auto lg:pt-[420px] md:pt-72 pt-20">
         <h2 className="md:text-4xl text-2xl font-bold text-gray-800 text-center">Explore Cutting-Edge Gadgets</h2>
 
       <div className="lg:grid grid-cols-12 lg:gap-0 gap-10 py-14 flex flex-col justify-center lg:items-start items-center">
       <Categories categories={categories}></Categories>
       {
-        navigation.state === 'loading' ? <p className="md:ml-96 text-gray-500 text-2xl my-8 font-medium">loading...</p> : <Outlet></Outlet>
+        navigation.state === 'loading' ? <span className="loading loading-infinity loading-lg lg:ml-96 text-info my-8"></span> : <Outlet></Outlet>
       }
       </div>
       </div>

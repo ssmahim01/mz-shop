@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col justify-center items-center gap-6 text-center bg-base-100 text-base-content rounded p-10">
       <nav className="grid grid-flow-row gap-4">
-        <h2 className="md:text-3xl text-xl font-bold">Gadget Heaven</h2>
+        <h2 className="md:text-3xl text-xl font-bold">MZ Shop</h2>
         <p className="text-gray-500 font-medium">
           Leading the way in cutting-edge technology and innovation
         </p>

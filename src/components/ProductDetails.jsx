@@ -58,7 +58,7 @@ const ProductDetails = () => {
   return (
     <div className="lg:pb-0 md:pb-[840px] pb-[680px]">
       <Helmet>
-        <title>Product Details - Gadget Heaven</title>
+        <title>Product Details | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="bg-bannerColor pt-10 lg:px-36 px-12 pb-52 relative">

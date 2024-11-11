@@ -15,7 +15,7 @@ const LayoutItems = () => {
       </div>
         <div className="min-h-[calc(100vh+80px)]">
         {
-        navigation.state === 'loading' ? <p className="text-center text-gray-500 text-2xl font-medium my-4">loading...</p> : <Outlet></Outlet>
+        navigation.state === 'loading' ? <span className="loading loading-infinity loading-lg text-info lg:ml-[700px] md:ml-96 my-8 mx-44"></span> : <Outlet></Outlet>
       }
         </div>
       <Footer />

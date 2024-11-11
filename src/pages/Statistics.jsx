@@ -5,7 +5,7 @@ const Statistics = () => {
   return (
     <div>
         <Helmet>
-        <title>Statistics - Gadget Heaven</title>
+        <title>Statistics | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="bg-bannerColor lg:px-36 px-12 py-10 relative">

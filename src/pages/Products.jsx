@@ -8,7 +8,7 @@ const Products = () => {
   return (
     <div>
         <Helmet>
-        <title>Products - Gadget Heaven</title>
+        <title>Products | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="md:w-4/5 w-11/12 mx-auto pt-5 pb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

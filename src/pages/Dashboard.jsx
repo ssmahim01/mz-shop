@@ -59,7 +59,7 @@ const Dashboard = () => {
 
   return <div>
      <Helmet>
-        <title>Dashboard - Gadget Heaven</title>
+        <title>Dashboard | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
     <div className="bg-bannerColor lg:px-36 px-12 py-12 relative">

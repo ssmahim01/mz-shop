@@ -46,8 +46,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          <img className="w-10 rounded-lg hidden md:block" src="/assets/banner.jpg" alt="Logo" />
-        <Link to={'/'} className={`btn btn-ghost md:text-2xl text-xl font-bold ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white" : ""}`}>Gadget Heaven</Link>
+          <img className="md:w-10 w-8 rounded-lg" src="/assets/banner.jpg" alt="Logo" />
+        <Link to={'/'} className={`btn btn-ghost md:text-2xl font-bold ${(location.pathname === '/' || location.pathname.includes('/category')) ? "text-white" : ""}`}>MZ Shop</Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -70,8 +70,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-4">
-       <Link className="border border-gray-200 bg-white rounded-full p-3 text-lg"><BsCart3 /> </Link>
-       <Link className="border border-gray-200 bg-white rounded-full p-3 text-lg"><FiHeart /></Link>
+       <Link className="border border-gray-200 bg-white rounded-full p-3 md:text-lg"><BsCart3 /> </Link>
+       <Link className="border border-gray-200 bg-white rounded-full p-3 md:text-lg"><FiHeart /></Link>
       </div>
     </div>
   );
