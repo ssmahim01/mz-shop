@@ -37,7 +37,7 @@ const ShopCart = ({ carts, handleSortItems, handleDeleteCart }) => {
   return (
     <div className="w-4/5 mx-auto py-12">
         <Helmet>
-        <title>Cart/Dashboard | MZ Shop</title>
+        <title>Cart | Dashboard | MZ Shop</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="lg:w-3/4 w-11/12 flex justify-between flex-col lg:flex-row flex-wrap text-center items-center gap-3">
